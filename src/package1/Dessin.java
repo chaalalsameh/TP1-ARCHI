@@ -11,7 +11,7 @@ public class Dessin extends JPanel{
 	/**
      * stocke la liste des trains ajoutées Ã  cette zone de dessin.
      */
-    private final List<TrainCercle> listeTrain = new CopyOnWriteArrayList();
+    private final List<IObjectDessinable> objDessin = new CopyOnWriteArrayList();
 
     /**
      * retourne la largeur de la zone de dessin.
