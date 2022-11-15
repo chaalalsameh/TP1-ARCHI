@@ -37,12 +37,12 @@ public class Dessin extends JPanel{
      * @param ch le train  à ajouter au Dessin
      * @see train
      */
-    public void ajouterObjet(TrainCercle t) {
+    public void ajouterObjet(IObjectDessinable t) {
 
-        if (!listeTrain.contains(t)) {
+        if (!objDessin.contains(t)) {
             // l'objet n'est pas déjà dans la liste
             // on le rajoute a la liste des objets du dessin
-        	listeTrain.add(t);
+        	objDessin.add(t);
             // le dessin se réaffiche
             repaint();
             this.pause(10);
@@ -70,7 +70,7 @@ public class Dessin extends JPanel{
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         //  dessiner les trains que contient le dessin
-        for (TrainCercle c : listeTrain) {
+        for (IObjectDessinable c : objDessin) {
             c.dessiner(g);
         }
     }
@@ -81,7 +81,7 @@ public class Dessin extends JPanel{
      */
     public void animer() {
         //  dessiner les Objets que contient le dessin
-        for (TrainCercle c : listeTrain) {
+        for (IObjectDessinable c : objDessin) {
         	c.deplacer();
             
         }
