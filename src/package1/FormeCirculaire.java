@@ -1,6 +1,5 @@
 package package1;
 
-package videoShowSolution;
 
 import java.awt.Color;
 
