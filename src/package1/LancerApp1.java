@@ -40,7 +40,7 @@ public class LancerApp1 {
 		(float) Math.random()), d, 10, 10);
 		d.ajouterObjet(lesTrains[i]);
 		}
-		
+		Visage v = new Visage(d);
 		
 		while(true) {
 		// la zone de dessin se réaffiche
