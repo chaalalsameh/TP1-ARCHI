@@ -40,13 +40,22 @@ public class LancerApp1 {
 		(float) Math.random()), d, 10, 10);
 		d.ajouterObjet(lesTrains[i]);
 		}
-		Visage v = new Visage(d);
+		
+		Visage v = new Visage(d, 10, 100);
 		d.ajouterObjet(v);
 		
 		Forme f1 = new Etoile(350, 100, 50, 8.f, Color.RED, Color.YELLOW);
 		Forme f2 = new PolygoneRegulier(5, 240, 40, 40, 4.0f, Color.DARK_GRAY, null);
 		d.ajouterObjet(f1);
 		d.ajouterObjet(f2);
+		
+		Forme f3 = new Etoile(200, 200, 40, 0.f, Color.GREEN  , Color.GREEN );
+		d.ajouterObjet(f3);
+		
+		Forme f4 = new PolygoneRegulier(5, 100, 60, 40, 6.0f, Color.BLACK,Color.BLACK );
+		d.ajouterObjet(f4);
+		
+		
 		
 		while(true) {
 		// la zone de dessin se réaffiche
